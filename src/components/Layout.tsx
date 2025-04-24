@@ -2,7 +2,7 @@
 import { useAuth } from "@/context/AuthContext";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LogOut, Horse } from "lucide-react";
+import { LogOut, Coffee } from "lucide-react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export default function Layout({ children }: LayoutProps) {
       <header className="bg-cafe-brown text-cafe-cream py-4 px-6 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <Horse className="h-8 w-8" />
+            <Coffee className="h-8 w-8" />
             <h1 className="text-2xl font-bold font-playfair">Nihal Café</h1>
           </Link>
           

@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import MenuCard from "@/components/MenuCard";
 import OfferCard from "@/components/OfferCard";
-import { ArrowRight, Horse } from "lucide-react";
+import { ArrowRight, Coffee } from "lucide-react";
 
 const Index = () => {
   const { menuItems, offers, lastRobotFetch, simulateRobotFetch } = useCafe();
@@ -22,7 +22,7 @@ const Index = () => {
     <Layout>
       <section className="py-12 text-center rope-pattern">
         <div className="max-w-4xl mx-auto px-4">
-          <Horse className="mx-auto h-16 w-16 text-cafe-brown mb-4" />
+          <Coffee className="mx-auto h-16 w-16 text-cafe-brown mb-4" />
           <h1 className="text-5xl font-bold text-cafe-brown mb-6">
             Welcome to Nihal Café
           </h1>

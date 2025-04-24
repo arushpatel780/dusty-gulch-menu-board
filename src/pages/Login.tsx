@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Horse } from "lucide-react";
+import { Coffee } from "lucide-react";
 
 const Login = () => {
   const { login, register } = useAuth();
@@ -63,7 +63,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-cafe-cream rope-pattern p-4">
       <div className="max-w-md w-full western-border bg-white p-8 rounded-lg">
         <div className="text-center mb-8">
-          <Horse className="mx-auto h-12 w-12 text-cafe-brown mb-4" />
+          <Coffee className="mx-auto h-12 w-12 text-cafe-brown mb-4" />
           <h1 className="text-2xl font-bold text-cafe-brown">Nihal Café Admin</h1>
         </div>
         
