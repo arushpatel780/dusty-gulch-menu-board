@@ -1,5 +1,9 @@
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Horse } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,13 +16,18 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <div className="min-h-screen flex items-center justify-center bg-cafe-cream horseshoe-background p-4">
+      <div className="max-w-md w-full text-center">
+        <Horse className="mx-auto h-16 w-16 text-cafe-brown mb-4" />
+        <h1 className="text-5xl font-bold text-cafe-brown mb-6">404</h1>
+        <p className="text-xl text-cafe-brown mb-8">
+          Whoa there, partner! This trail leads nowhere.
+        </p>
+        <Link to="/">
+          <Button className="bg-cafe-brown hover:bg-cafe-lightBrown text-cafe-cream">
+            Back to the Ranch
+          </Button>
+        </Link>
       </div>
     </div>
   );
