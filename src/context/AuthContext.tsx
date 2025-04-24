@@ -72,11 +72,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       throw new Error("User already exists");
     }
     
-    // In a real app, you would create a user in the database
-    // For this mockup, we'll just pretend we did and log them in
-    const newUser = { id: `${MOCK_USERS.length + 1}`, email, isAdmin: true };
-    setUser(newUser);
-    localStorage.setItem("user", JSON.stringify(newUser));
+    // Create a new user
+    const newUser = { 
+      id: `${MOCK_USERS.length + 1}`, 
+      email, 
+      password,
+      isAdmin: true 
+    };
+    
+    // Add to mock database
+    MOCK_USERS.push(newUser);
+    
+    // Create user object without password for state
+    const { password: _, ...userWithoutPassword } = newUser;
+    
+    // Set user state and store in localStorage
+    setUser(userWithoutPassword);
+    localStorage.setItem("user", JSON.stringify(userWithoutPassword));
     
     toast.success("Registration successful!");
     setIsLoading(false);
